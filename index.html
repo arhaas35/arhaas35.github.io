@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Birthday Checker</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #f4f4f9;
+      color: #333;
+    }
+    .container {
+      text-align: center;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    .message {
+      font-size: 2em;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div id="birthday-message" class="message"></div>
+  </div>
+
+  <script>
+    // Get the current date
+    const today = new Date();
+    const month = today.getMonth() + 1; // getMonth() is zero-indexed
+    const day = today.getDate();
+
+    // Check if it's December 11th
+    const message = (month === 12 && day === 11) ? "Happy Birthday!" : "Not a happy birthday";
+
+    // Set the message on the page
+    document.getElementById("birthday-message").textContent = message;
+  </script>
+</body>
+</html>
